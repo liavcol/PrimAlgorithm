@@ -13,10 +13,11 @@ private:
 
 public:
 	Vertex(char name);
-	Vertex(const Vertex& og);
+
 	char GetName() const;
+
 	void AddAdjacent(Edge* e);
 	void RemoveAdjacent(Edge* e);
-	const std::list<Edge*>& Adj();
+	const std::list<Edge*>& Adj() const;
 };
 

@@ -2,8 +2,6 @@
 
 Vertex::Vertex(char name) : _name(name) { }
 
-Vertex::Vertex(const Vertex& og) : _name(og._name) { }
-
 char Vertex::GetName() const { return _name; }
 
 void Vertex::AddAdjacent(Edge* e) { _adj.push_back(e); }
@@ -20,4 +18,4 @@ void Vertex::RemoveAdjacent(Edge* e)
 	}
 }
 
-const std::list<Edge*>& Vertex::Adj() { return _adj; }
+const std::list<Edge*>& Vertex::Adj() const { return _adj; }
